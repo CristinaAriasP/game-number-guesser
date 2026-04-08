@@ -22,4 +22,13 @@ boton.addEventListener('click', function() {
         mensaje.textContent = "Demasiado bajo. ¡Prueba otra vez! 👆";
         mensaje.style.color = "red";
     }
+
+    input.value = ""; 
+    input.focus();
+});
+
+input.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        boton.click();
+    }
 });
